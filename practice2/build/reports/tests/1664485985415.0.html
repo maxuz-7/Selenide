@@ -1,0 +1,260 @@
+<html><head>
+    <meta name="robots" content="noindex,nofollow" charset="utf-8">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <title>Книжный магазин</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo"><a href="index.html">Книжный магазин</a></div>
+        <div id="search">
+            <input name="search-input-form" id="search-input" type="text" placeholder="Поиск по магазину..." autocomplete="off" maxlength="100" value="">
+        </div>
+        <div id="shop">
+            <a href="checkout.html">
+                <img src="./img/shop4.png">
+            </a>
+            <span id="cart_count">0</span>
+        </div>
+    </header>
+    
+    <div class="filter-container">
+        <span>
+            Показать все книги автора: 
+            <select name="author" title="Имя автора" onchange="ChangeSelectedAttribute(this)">
+                <option value="Рэнд А." selected="">Рэнд А.</option>
+                <option value="Те Нэм Джу">Те Нэм Джу</option>
+                <option value="Уайт К.">Уайт К.</option>
+                <option value="Лабковский М.">Лабковский М.</option>
+                <option value="Disney">Disney</option>
+                <option value="Хара Д.">Хара Д.</option>
+                <option value="Мэнсон М.">Мэнсон М.</option>
+                <option value="Синсеро Дж.">Синсеро Дж.</option>
+                <option value="Янссон Т.">Янссон Т.</option>
+                <option value="Руни С.">Руни С.</option>
+                <option value="Оруэлл Дж.">Оруэлл Дж.</option>
+                <option value="Петросян М.">Петросян М.</option>
+                <option value="Коэльо П.">Коэльо П.</option>
+                <option value="Сапковский А.">Сапковский А.</option>
+                <option value="Брэдбери Р.">Брэдбери Р.</option>
+            </select>
+        </span>
+        <span>
+            Год выпуска книги: 
+            <select name="year" title="Год выпуска" onchange="ChangeSelectedAttribute(this)">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020" selected="">2020</option>
+            </select>
+        </span>
+        <br>
+        <br>
+        <span>Название книги: 
+            <input type="text" name="fname">
+        </span>
+        <span>
+            Стоимость книги от: 
+            <input type="number" name="scost">
+        </span>
+        <br>
+        <br>
+        <span>
+            <button class="filter-button show-results">Показать</button>
+            <button class="filter-button">Отменить</button>
+        </span>
+    </div>
+
+    <div class="content">
+        <h1>Результаты поиска:</h1>
+        <div class="content-item">
+            <div class="book-info">
+                <img src="./img/book1.jpg">
+                <div class="book-description">
+                    <h1>Атлант расправил плечи</h1>
+                   Рэнд А.
+                </div>
+                <div class="book-price">
+                    <h1>790 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book2.jpg">
+                <div class="book-description">
+                    <h1>Госпожа Ким Чжи Ен,<br>рожденная в 1982 году</h1>
+                    Те Нэм Джу
+                </div>
+                <div class="book-price">
+                    <h1>363 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book3.jpg">
+                <div class="book-description">
+                    <h1>Ночь, когда огни погасли</h1>
+                    Уайт К.
+                </div>
+                <div class="book-price">
+                    <h1>420 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book4.jpg">
+                <div class="book-description">
+                    <h1>Хочу и буду: Принять себя, полюбить жизнь и стать счастливым</h1>
+                    Лабковский М.
+                </div>
+                <div class="book-price">
+                    <h1>499 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book5.jpg">
+                <div class="book-description">
+                    <h1>Гравити Фолз.<br> Дневник 3</h1>
+                   Disney
+                </div>
+                <div class="book-price">
+                    <h1>1370 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="book-info">
+                <img src="./img/book6.jpg">
+                <div class="book-description">
+                    <h1>ПерепроШивка.<br> Книга-тренинг, меняющая жизнь.</h1>
+                    Хара Д.
+                </div>
+                <div class="book-price">
+                    <h1>451 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book7.jpg">
+                <div class="book-description">
+                    <h1>Тонкое искусство пофигизма</h1>
+                    Мэнсон М.
+                </div>
+                <div class="book-price">
+                    <h1>481 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book8.jpg">
+                <div class="book-description">
+                    <h1>НИ СЫ. Будь уверен в своих силах</h1>
+                    Синсеро Дж.
+                </div>
+                <div class="book-price">
+                    <h1>642 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book9.jpg">
+                <div class="book-description">
+                    <h1>Все о муми-троллях.<br> Книга 1</h1>
+                    Янссон Т.
+                </div>
+                <div class="book-price">
+                    <h1>555 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book10.jpg">
+                <div class="book-description">
+                    <h1>Нормальные люди</h1>
+                    Руни С.
+                </div>
+                <div class="book-price">
+                    <h1>451 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="book-info">
+                <img src="./img/book11.jpg">
+                <div class="book-description">
+                    <h1>1984</h1>
+                    Оруэлл Дж.
+                </div>
+                <div class="book-price">
+                    <h1>301 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book12.jpg">
+                <div class="book-description">
+                    <h1>Дом, в котором...</h1>
+                    Петросян М.
+                </div>
+                <div class="book-price">
+                    <h1>605 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book13.jpg">
+                <div class="book-description">
+                    <h1>Алхимик</h1>
+                    Коэльо П.
+                </div>
+                <div class="book-price">
+                    <h1>189 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book14.jpg">
+                <div class="book-description">
+                    <h1>Ведьмак</h1>
+                    Сапковский А.
+                </div>
+                <div class="book-price">
+                    <h1>1644 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <img src="./img/book15.jpg">
+                <div class="book-description">
+                    <h1>451° по Фаренгейту</h1>
+                    Брэдбери Р.
+                </div>
+                <div class="book-price">
+                    <h1>294 р.</h1>
+                    <button class="book-add" onclick="AddToCart(this.parentElement)">В КОРЗИНУ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div><a href="">Обратная связь</a></div>
+        <div><a href="">Предзаказы</a></div>
+        <div id="preorder740"><a href="" test-info="about-us">О магазине</a></div>
+    </footer>
+    <script src="./js/index.js"></script>
+
+
+
+</body></html>
